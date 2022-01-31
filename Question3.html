@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head
+><p class="heading"> Precision modifier </p>
+<input type="" class="" id="decimalInp" />
+<br>
+<br>
+<input type="" class="" id="precisionInp" />
+<br>
+<button class="btn btn-success mx-auto my-4 col-4"  onclick="converter()"> <span id="resultBtn">convert</span></button>
+<br>
+<p id="result"></p>
+<body>
+    <script>
+        let decimalInp = document.getElementById("decimalInp");
+let precisionInp = document.getElementById("precisionInp");
+
+let result = document.getElementById("result");
+
+
+function converter(){
+	let x = parseFloat(decimalInp.value);
+	result.innerText = x.toFixed(parseInt(precisionInp.value));
+}
+
+    </script>
+    
+</body>
+</html>

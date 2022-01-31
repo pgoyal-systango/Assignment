@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=	<div class=" glassmorph roundedBorder d-flex justify-content-center
+        align-item-center" id="grandParent">
+
+    <title>Document</title>
+</head>
+<div class="">
+    <p class="heading"> Enter the URL to check- </p>
+    <input type="text" class="customeInput col-12 col-md-8 p-2" id="inp" />
+    <br>
+    <button class="btn btn-success mx-auto my-4 col-6" onclick="check()"> <span id="resultBtn">check</span></button>
+    <br>
+    <p id="result"></p>
+
+</div>
+</div>
+
+<body>
+    <script>
+    
+       
+let inp = document.getElementById("inp");
+let result = document.getElementById("result");
+
+let requestPort = ["https://www.","http://www."];
+let requestDomain = [".com",".ru",".org",".net",".ir",".in",".uk",".au",".de",".ua",".gov",".io",".edu",".info",".biz"] 
+
+function check(){
+	
+	let validPort = false;
+	let validDomain = false;
+
+	
+	for( let x of requestPort){
+		if(inp.value.includes(x)){
+			validPort = true;
+		}
+	}
+	console.log( validPort );
+
+
+
+	for( let x of requestDomain){
+		if(inp.value.includes(x)){
+			validDomain = true;
+		}
+	}
+	console.log( validDomain );
+
+	
+	let res = validPort && validDomain;
+	
+	if(res === true){
+		result.innerText = "Yes, its a valid URL";
+	}
+	else{
+		result.innerText = "No, its not a valid URL";
+
+	}
+}
+    </script>
+
+</body>
+
+</html>

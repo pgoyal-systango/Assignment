@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p class="heading"> Enter a number </p>
+<input type="" class="customeInput col-12 col-md-8 p-2" id="inp" />
+<br>
+<button class="" onclick="check()"> <span id="resultBtn">check</span></button>
+<br>
+<pre id="result"></pre>
+
+<body>
+    <script>
+        let inp = document.getElementById("inp");
+        let result = document.getElementById("result");
+
+        function evenOdd(num) {
+
+            if (num === 0) {
+                return "even";
+            }
+            else if (num === 1) {
+                return "odd";
+            }
+            else {
+                return evenOdd(num - 2);
+            }
+
+        }
+
+        function check() {
+            let rows = parseInt(inp.value);
+            result.innerHTML = evenOdd(parseInt(inp.value));
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="glassmorph roundedBorder d-flex justify-content-center align-item-center " id="grandParent">
+    <div class="col-12">
+        <p class="heading d-flex justify-content-center"> Add salary </p>
+        <br>
+        <div class="container col-5 roundedBorder d-flex justify-content-center" id="Boxs1" onmouseover="randomColor()">
+                content of box 1
+        </div>
+            
+    </div>
+</div>
+<body>
+    <script>
+        function randomColor(){
+	//alert("alert aaya");
+
+	let colors = ["red", "green", "yellow", "blue", "orange"];
+
+	let randomNum = Math.floor(Math.random() * colors.length);
+
+	document.getElementById("Boxs1").style.backgroundColor = colors[randomNum];
+}
+
+
+    </script>
+</body>
+</html>
